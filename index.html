@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kim Cheolho | Professional Portfolio</title>
+    
+    <!-- Google Fonts: Noto Sans KR (Main), JetBrains Mono (Brutalist Accent) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Noto Sans KR"', 'sans-serif'],
+              mono: ['"JetBrains Mono"', 'monospace'],
+            },
+            colors: {
+              kolon: {
+                blue: '#004D9D', // Keeping variable names for code stability, but represents Personal Brand Color 1
+                green: '#00A651', // Personal Brand Color 2
+                cream: '#F2F2F2', 
+                dark: '#000000',  
+                paper: '#FFFFFF'
+              }
+            },
+            boxShadow: {
+              'hard': '5px 5px 0px 0px rgba(0,0,0,1)',
+              'hard-sm': '3px 3px 0px 0px rgba(0,0,0,1)',
+              'hard-lg': '8px 8px 0px 0px rgba(0,0,0,1)',
+              'hard-white': '5px 5px 0px 0px rgba(255,255,255,1)',
+            },
+            animation: {
+              'marquee': 'marquee 25s linear infinite',
+            },
+            keyframes: {
+              marquee: {
+                '0%': { transform: 'translateX(0%)' },
+                '100%': { transform: 'translateX(-100%)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #FFFFFF;
+        color: #000000;
+        overflow-x: hidden;
+      }
+      .dark body {
+        background-color: #121212;
+        color: #F0F0F0;
+      }
+      /* Brutalist selection style */
+      ::selection {
+        background-color: #004D9D;
+        color: #FFFFFF;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+          display: none;
+      }
+      .no-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "recharts": "https://esm.sh/recharts@^3.6.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
+    "html2canvas": "https://esm.sh/html2canvas@1.4.1",
+    "jspdf": "https://esm.sh/jspdf@2.5.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
